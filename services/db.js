@@ -134,15 +134,19 @@ const makeSeries = (costsArrays) => {
     food = []
     accomadations = []
     other = []
+    date = []
+    month = []
     
     for (let i=0;i<costsArrays.length;i++) {
         transportation.push(costsArrays[i][0])
         food.push(costsArrays[i][1])
         accomadations.push(costsArrays[i][2])
         other.push(costsArrays[i][3])
+        date.push(costsArrays[i][4])
+        month.push(costsArrays[i][5])
     }
 
-    return [transportation,food,accomadations,other]
+    return [transportation,food,accomadations,other,date,month]
 }
 
 async function checkData() { //return number of entries

@@ -13,15 +13,23 @@ const EntryForm = () => {
 
     const navigation = useNavigation()
 
-    const onpush = (desc,curr,price,type) => {
+    const [type,setType] = useState()
+    const [units,setUnits] = useState()
+    const [price,setPrice] = useState('CAD')
+    const [description,setDescription] = useState()
+
+    const onpush = () => {
         // pushObject(desc,curr,price,type)
+        console.log(description,units,price,type)
+    }
+
+    const onpush1 = () => {
         navigation.navigate('Daily')
     }
 
-    const [type,setType] = useState('unknown')
-    const [units,setUnits] = useState('cad')
-    const [price,setPrice] = useState(0)
-    const [description,setDescription] = useState('unknown')
+    const onpush2 = () => {
+        navigation.navigate('Overall')
+    }
 
     return (
         <SafeAreaView style={styles.safeView}>
@@ -66,6 +74,21 @@ const EntryForm = () => {
                     color='#676767'
                     onPress={onpush}
                 />
+                <Separator style={styles.sep}/>
+                <View style={{flexDirection:"row"}}>
+                    <View style={styles.margins2}>
+                        <Button
+                            title="Daily"
+                            color='#FFC79D'
+                            onPress={onpush1}/>
+                    </View>
+                    <View>
+                        <Button
+                            title='Overall'
+                            color='#FFC79D'
+                            onPress={onpush2}/>
+                    </View>
+                </View>
             </View>
         </SafeAreaView>
     )
@@ -98,8 +121,13 @@ const styles = StyleSheet.create({
         alignContent: 'center'
     },
     margins: {
-        // marginBottom:5,
-        // paddingVertical: 5
+        // marginLeft:"40%",
+        // paddingHorizontal: 5
+    },
+    margins2: {
+        marginLeft:"42%",
+        paddingHorizontal: 5,
+        marginRight: "5%"
     },
     sep: {
         marginVertical: 8,

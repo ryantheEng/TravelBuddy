@@ -1,15 +1,15 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
-import { DailyDoughnut } from '../components/showgraph.js'
+import { OverallBar } from '../components/showgraph.js'
 
-export default function DailyScreen() {
+export default function OverallScreen() {
 
     // const navigation = useNavigation()
 
     return(
     <View>
         <Text style={styles.text}>Travel Buddy</Text>
-        <DailyDoughnut/>
+        <OverallBar/>
     </View>
     )
 }
