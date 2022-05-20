@@ -79,13 +79,13 @@ const EntryForm = () => {
                     <View style={styles.margins2}>
                         <Button
                             title="Daily"
-                            color='#FFC79D'
+                            color='#004E96'
                             onPress={onpush1}/>
                     </View>
                     <View>
                         <Button
                             title='Overall'
-                            color='#FFC79D'
+                            color='#004E96'
                             onPress={onpush2}/>
                     </View>
                 </View>
@@ -107,13 +107,13 @@ const styles = StyleSheet.create({
     },
     bordercontainer: {
         borderWidth:1,
-        paddingVertical: 7,
+        paddingVertical: 4,
         paddingLeft: 5
     },
     text:{
         fontWeight:'bold',
-        fontSize:16,
-        paddingVertical: 5
+        fontSize:14,
+        paddingVertical: 2
         
     },
     view: {
@@ -125,12 +125,12 @@ const styles = StyleSheet.create({
         // paddingHorizontal: 5
     },
     margins2: {
-        marginLeft:"42%",
+        marginLeft:"2%",
         paddingHorizontal: 5,
-        marginRight: "5%"
+        marginRight: "2%"
     },
     sep: {
-        marginVertical: 8,
+        marginVertical: 3,
         borderBottomColor: '#737373',
         borderBottomWidth: StyleSheet.hairlineWidth,
       }

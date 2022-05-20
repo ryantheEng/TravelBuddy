@@ -52,27 +52,27 @@ export function DailyDoughnut () {
     return (
         <View style={styles.piecontainer}>
         <Text style={styles.value}>Total: ${dummycosts[4]} CAD</Text>
-            <Pie data = {data_}/>
+            <Pie data = {data_} options={options_}/>
         </View>
     )
 }
 
 const dummyoverall = 
 [
-    [1,2,3,4,10,5,6],
-    [2,3,4,5,10,6,6],
-    [3,4,5,6,10,7,6],
-    [5,6,7,8,9,10,11],
-    [10,10,10,10,10,10,10],
-    [1,2,3,4,5,6,7],
-    [5,5,5,5,5,5,5]
+    [1,2,3,4,10,5,6], //transporation
+    [2,3,4,5,10,6,6], //accomadation
+    [3,4,5,6,10,7,6], //food
+    [5,6,7,8,9,10,11], //other
+    [10,10,10,10,10,10,10], //total
+    [1,2,3,4,5,6,7], //date
+    [5,5,5,5,5,5,5] //month
 ]
 
 export function OverallBar () { //costs
     const datetime = []
     const costs = dummyoverall
     for (let i=0;i<costs.length;i++) {
-        datetime.push(String(costs[4][i])+'/'+String(costs[5][i])+'/2022')
+        datetime.push(String(costs[5][i])+'/'+String(costs[6][i])+'/2022')
     }
 
     console.log(datetime)

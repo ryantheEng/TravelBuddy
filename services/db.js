@@ -84,7 +84,7 @@ export const dailyReportWrapper = () => {
     let date = Date.getDate()
     let month = Date.getMonth()
 
-    let objects = getObjects()
+    let objects = await getObjects()
 
     let costs = dailyReport(date,month,objects)
     return costs
@@ -92,7 +92,7 @@ export const dailyReportWrapper = () => {
 
 export const overallReport = () => {
     let costs = []
-    let objects = getObjects()
+    let objects = await getObjects()
     
     let date = objects[0].date
     let month = objects[0].month
